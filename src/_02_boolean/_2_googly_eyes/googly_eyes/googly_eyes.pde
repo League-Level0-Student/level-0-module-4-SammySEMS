@@ -18,7 +18,21 @@ void draw() {
   //ellipse(240,260,20,100);
   //ellipse(390,280,20,100);
   
-  ellipse(mouseX,mouseY,20,20);
+ 
+  
+ if(mouseX < 218) {
+   mouseX = 218;}
+    
+ if(mouseY < 224) {
+  mouseY = 224;}
+    
+   if(mouseY > 294) {
+     mouseY = 294;}
+   
+   if(mouseX > 262) {
+     mouseX = 262;}
+     
+   ellipse(mouseX,mouseY,20,20);
   ellipse(mouseX+150,mouseY+20,20,20);
   
   if(mousePressed){
