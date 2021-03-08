@@ -1,7 +1,12 @@
 package _03_char._3_pi_aloud;
 
+import java.awt.print.Printable;
 import java.io.IOException;
 import java.util.Scanner;
+
+import javax.management.StringValueExp;
+
+import org.omg.CORBA.StringValueHelper;
 
 public class PiAloud {
 	/***********  SOUND ***************
@@ -13,12 +18,15 @@ public class PiAloud {
 	
 	
 	// 1. Make a main method and make sure your program can run
-
+public static void main(String[] args) {
+	
+//First 20 digits of Pie = 3.1 415926535 8979323846
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
+String Pi20 = "3.1 415926535 8979323846";
 
 	// 3. Print out 3 digits of Pi. The first value is "pi.charAt(0)", the second is "pi.charAt(1)"
 	// Check the console shows 3.1
-
+//print(pi.sharAt(0));
 	// 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
 
 	// 5. Skip this step if your computer cannot play sounds. 
@@ -32,7 +40,7 @@ public class PiAloud {
 	// *7. Compare the users' char to the next digit of Pi
 	// *8. If they are correct, print out "correct". If they are not, print "incorrect" 
 	
-	
+}
 	
 	/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
