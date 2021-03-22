@@ -7,38 +7,76 @@ import java.awt.event.KeyEvent;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class FruitQuiz extends KeyAdapter {
 
+	
+	JLabel question1 = new JLabel(), question2 = new JLabel(), question3 = new JLabel(), question4 = new JLabel(),
+			question5;
+	
 	void makeQuestions() {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
+		question2 = new JLabel("<html>Which is not a real fruit <br> d: jalapeno <br> e: cucumber <br> f: tomato </html>");
+		question3 = new JLabel("<html>Which is a real fruit <br> g: jalapeno <br> h: celery <br> i: potato </html>");
 	}
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
 		int keyCode = arg0.getKeyCode();
 		// 1. Print out the key code variable
-
+System.out.println(keyCode);
 		// 2. Make 3 int variables that hold the key codes for A, b, and C
-		
+		int a = 65;
+		int b = 66;
+		int c = 67;
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The questions must be in reverse order from top to bottom to work properly
 		
-		// 12. If question2 is showing,
-			
-			// 13. check if it is right or wrong like you did for question1
 		
+		
+		// 12. If question2 is showing,
+			int d = 68;
+			int e = 69;
+			int f = 70;
+			
+			if (keyCode == 69) {
+				JOptionPane.showMessageDialog(null, "Correct!");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect");
+			}
+			
+			nextQuestion(question2);
+			
+			int g = 71;
+			int h = 72;
+			int i = 73;
+			
+			if (keyCode == 71) {
+				JOptionPane.showMessageDialog(null, "Correct");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect");
+			}
+			// 13. check if it is right or wrong like you did for question1
+			nextQuestion(question3);
+			
 			
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
+			if (keyCode == c) {
+		
 			
 				// 4. Call the correct() method
-				
+				JOptionPane.showMessageDialog(null, "Correct!");
 				// 7. Use the nextQuestion() method to go to question2
 			
-			
+			}
 			// 8. else (if they touched something else)
-				
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect.");
+			}
 				// 9. Call the incorrect() method
 		
 		}
@@ -89,7 +127,6 @@ public class FruitQuiz extends KeyAdapter {
 		frame.addKeyListener(this);
 	}
 
-	JLabel question1 = new JLabel(), question2 = new JLabel(), question3 = new JLabel(), question4 = new JLabel(),
-			question5;
+	
 }
 
