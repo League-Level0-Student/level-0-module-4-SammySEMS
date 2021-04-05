@@ -21,6 +21,7 @@ void draw() {
     fill(#D32929);
     if (isNear()){
       fill(#66BC55);
+System.out.println("You have found the creeper!");
     }
      ellipse(mouseX, mouseY, 10, 10);
   }
